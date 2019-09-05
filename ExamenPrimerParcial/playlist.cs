@@ -6,35 +6,23 @@ namespace ExamenPrimerParcial
 {
     class playlist
     {
-        public string Titulo { get; set; }
+       public string Titulo { get; set; }
         public string Descripcion { get; set; }
-        public int _Año;
+        public List<Peliculas> playlistdepeliculas { get; set; }
 
-        public List<playlist> Peliculas { get; set; }
-     
-        public Peliculas()
+        public playlist()
         {
-            Peliculas = new List<playlist>();
+            Titulo = "No se encuentra titulo";
+            Descripcion = "no Se encuentra una descripcion";
+            playlistdepeliculas = new List<Peliculas>();
         }
 
-        public int Año
+        public playlist(string titulo, string descripcion)
         {
-            get
-            {
-                return _Año;
-            }
-            set
-            {
-                if (value >= 1800)
-                {
-                    _Año = value;
-                }
-
-                else
-                {
-                    throw new Exception("Año menor de 1800");
-                }
-            }
+            Titulo = titulo;
+            Descripcion = descripcion;
+            playlistdepeliculas = new List<Peliculas>();
         }
+    }
     }
 }

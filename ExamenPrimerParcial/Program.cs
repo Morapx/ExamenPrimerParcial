@@ -6,12 +6,18 @@ namespace ExamenPrimerParcial
     {
         static void Main(string[] args)
         {
-            Peliculas Matrix = new Peliculas("Matrixx", "2001", "Ricardo", "USA");
-            Peliculas Blade = new Peliculas("Bladee", "2003", "Milos", "USA");
-            Peliculas Running = new Peliculas("Runningg", "2009", "Mario", "Canada");
-            Peliculas Hellboy = new Peliculas("Hellboyy", "2006", "Pepe", "USA");
-            Peliculas Nemo = new Peliculas("Nemoo", "1999", "Memo", "USA");
-            Peliculas lepix = new 
+            List<playlist> playlist = new List<playlist>();
+
+            playlist playlist1 = new playlist("Familiar", "Peliculas para toda la familia");
+            playlist playlist2 = new playlist("Mayor", "Peliculas recomendadas a mayores de 12");
+
+            playlist.Add(playlist1);
+            playlist.Add(playlist2);
+
+            playlist1.playlistdepeliculas.Add(new Peliculas("Nemo", "2000", "Pepe", "USA", "Pez pequeño perdido", "Aventura", "8", "220"));
+
+
+
         }
     }
 }
